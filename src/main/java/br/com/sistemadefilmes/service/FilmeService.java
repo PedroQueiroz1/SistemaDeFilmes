@@ -2,7 +2,6 @@ package br.com.sistemadefilmes.service;
 
 import java.util.ArrayList;
 
-// Implementar métodos e mudar se necessário o tipo de retorno.
 public class FilmeService {
     private ArrayList<Filme> filmes;
 
