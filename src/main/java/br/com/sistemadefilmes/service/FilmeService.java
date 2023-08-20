@@ -28,6 +28,7 @@ public class FilmeService {
                     System.out.println("Nome: " + filme.getNome());
                     System.out.println("Diretor: " + filme.getDiretor());
                     System.out.println("Data de Lançamento: " + filme.getDataDeLancamento());
+                    System.out.println("Descrição: " + filme.getDescricao());
                     scanner.close();
                     return;
                 }
