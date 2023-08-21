@@ -7,4 +7,9 @@ package br.com.sistemadefilmes.model;
  */
 public class Ator extends Pessoa {
 
+    @Override
+    public void apresentar() {
+        System.out.println("Sou o ator: " + getPrimeiroNome() + " " + getSegundoNome());
+    }
+
 }

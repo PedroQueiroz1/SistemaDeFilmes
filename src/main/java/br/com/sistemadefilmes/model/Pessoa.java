@@ -20,4 +20,7 @@ public abstract class Pessoa {
     public void setSegundoNome(String segundoNome) {
         this.segundoNome = segundoNome;
     }
+
+    // TODO criar outro metodo que faça mais sentido para ter polimorfismo no trabalho.
+    public abstract void apresentar();
 }
