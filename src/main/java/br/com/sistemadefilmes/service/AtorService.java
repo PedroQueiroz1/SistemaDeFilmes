@@ -1,8 +1,18 @@
 package br.com.sistemadefilmes.service;
 
-// Implementar métodos e mudar se necessário o tipo de retorno.
+import br.com.sistemadefilmes.model.Ator;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class AtorService {
 
-    public void cadastrarAtor(){}
+    private List<Ator> listaAtores = new ArrayList<>();
+
+    public void cadastrarAtor(Ator ator){
+        listaAtores.add(ator);
+        System.out.println("O ator " + ator.getPrimeiroNome() + " "
+                + ator.getSegundoNome() + " foi cadastrado com sucesso!");
+    }
 
 }

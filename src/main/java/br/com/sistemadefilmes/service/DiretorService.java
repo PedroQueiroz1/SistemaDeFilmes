@@ -1,9 +1,18 @@
 package br.com.sistemadefilmes.service;
 
-// Implementar métodos e mudar se necessário o tipo de retorno.
+import br.com.sistemadefilmes.model.Diretor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class DiretorService {
 
+    private List<Diretor> listaDiretores = new ArrayList<>();
 
-    public void cadastrarDiretor(){}
+    public void cadastrarDiretor(Diretor diretor){
+        listaDiretores.add(diretor);
+        System.out.println("O diretor " + diretor.getPrimeiroNome() + " "
+                + diretor.getSegundoNome() + " foi cadastrado com sucesso!");
+    }
 
 }

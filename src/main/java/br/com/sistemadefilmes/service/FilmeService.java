@@ -1,49 +1,34 @@
 package br.com.sistemadefilmes.service;
 
+import br.com.sistemadefilmes.model.Filme;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class FilmeService {
-    private ArrayList<Filme> filmes;
 
-    public FilmeService() {
-        filmes = new ArrayList<Filme>();
+    private List<Filme> listaFilmes = new ArrayList<>();
 
-        public void cadastrarFilme (Filme filme){
-            if (filmes.contains(filme)) {
-                System.out.println("O filme já está cadastrado.");
-                return false;
-            }
-            filmes.add(filme);
-            System.out.println("Filme cadastrado com sucesso!");
-            return true;
+    public void cadastrarFilme(Filme filme) {
+        if (filme.getAtor() == null || filme.getDiretor() == null) {
+            System.out.println("Não é possível cadastrar o filme, pois o ator ou o diretor não existem.");
+            System.out.println("Favor, cadastrar um ator e diretor antes de criar um novo filme.");
+        } else {
+            listaFilmes.add(filme);
+            System.out.println("O filme " + filme.getNome() + " foi cadastrado com sucesso!");
+            System.out.println("Info: \n" + filme.toString());
         }
 
-        public void buscarFilme () {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Digite o nome do filme que deseja buscar:");
-            String nome = scanner.nextLine();
-            for (Filme filme : filmes) {
-                if (filme.getNome().equals(nome)) {
-                    System.out.println("Filme encontrado:");
-                    System.out.println("Nome: " + filme.getNome());
-                    System.out.println("Diretor: " + filme.getDiretor());
-                    System.out.println("Data de Lançamento: " + filme.getDataDeLancamento());
-                    System.out.println("Descrição: " + filme.getDescricao());
-                    scanner.close();
-                    return;
-                }
-            }
-            System.out.println("Filme não encontrado.");
-            scanner.close();
-        }
     }
 
-    /*
-    Implementações a serem feitas posteriormente:
+    public void buscarFilmePorNome(String nome) {
+        for (Filme filme : listaFilmes) {
+            if (filme.getNome().equalsIgnoreCase(nome)) {
+                System.out.println("Filme encontrado. \n Info: \n " + filme.toString());
+            }
+        }
+        System.out.println("Nenhum filme encontrado com o nome " + nome);
+    }
 
-    public void adicionarDiretor(){}
+    }
 
-    public void adicionarAtor(){}
-     */
-
-}
