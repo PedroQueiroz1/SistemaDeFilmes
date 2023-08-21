@@ -7,14 +7,14 @@ public class Filme {
     private LocalDate dataDeLancamento;
     private String descricao;
     private Diretor diretor;
-    private List<Ator> ator;
+    private List<Ator> atores;
 
-    public Filme(String nome, LocalDate dataDeLancamento, String descricao, Diretor diretor, List<Ator> ator) {
+    public Filme(String nome, LocalDate dataDeLancamento, String descricao, Diretor diretor, List<Ator> atores) {
         this.nome = nome;
         this.dataDeLancamento = dataDeLancamento;
         this.descricao = descricao;
         this.diretor = diretor;
-        this.ator = ator;
+        this.atores = atores;
     }
 
     public String getNome() {
@@ -49,12 +49,12 @@ public class Filme {
         this.diretor = diretor;
     }
 
-    public List<Ator> getAtor() {
-        return ator;
+    public List<Ator> getAtores() {
+        return atores;
     }
 
-    public void setAtor(List<Ator> ator) {
-        this.ator = ator;
+    public void setAtores(List<Ator> atores) {
+        this.atores = atores;
     }
 
 
@@ -66,7 +66,7 @@ public class Filme {
                 ", dataDeLancamento=" + dataDeLancamento +
                 ", descricao='" + descricao + '\'' +
                 ", diretor=" + diretor +
-                ", ator=" + ator +
+                ", atores=" + atores +
                 '}';
     }
 }
