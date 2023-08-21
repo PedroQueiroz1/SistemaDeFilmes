@@ -9,14 +9,6 @@ public class Filme {
     private Diretor diretor;
     private List<Ator> atores;
 
-    public Filme(String nome, LocalDate dataDeLancamento, String descricao, Diretor diretor, List<Ator> atores) {
-        this.nome = nome;
-        this.dataDeLancamento = dataDeLancamento;
-        this.descricao = descricao;
-        this.diretor = diretor;
-        this.atores = atores;
-    }
-
     public String getNome() {
         return nome;
     }
