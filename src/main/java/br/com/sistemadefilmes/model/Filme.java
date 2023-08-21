@@ -1,19 +1,20 @@
 package br.com.sistemadefilmes.model;
 import java.time.LocalDate;
+import java.util.List;
 
-// Implementar atributos
 public class Filme {
     private String nome;
-    private String diretor;
     private LocalDate dataDeLancamento;
     private String descricao;
+    private Diretor diretor;
+    private List<Ator> ator;
 
-    public Filme(String nome, String diretor, LocalDate dataDeLancamento, String descricao) {
+    public Filme(String nome, LocalDate dataDeLancamento, String descricao, Diretor diretor, List<Ator> ator) {
         this.nome = nome;
-        this.diretor = diretor;
         this.dataDeLancamento = dataDeLancamento;
         this.descricao = descricao;
-
+        this.diretor = diretor;
+        this.ator = ator;
     }
 
     public String getNome() {
@@ -22,14 +23,6 @@ public class Filme {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getDiretor() {
-        return diretor;
-    }
-
-    public void setDiretor(String diretor) {
-        this.diretor = diretor;
     }
 
     public LocalDate getDataDeLancamento() {
@@ -46,5 +39,34 @@ public class Filme {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Diretor getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(Diretor diretor) {
+        this.diretor = diretor;
+    }
+
+    public List<Ator> getAtor() {
+        return ator;
+    }
+
+    public void setAtor(List<Ator> ator) {
+        this.ator = ator;
+    }
+
+
+    // TODO remover toString() e adicionar StringBuilder no lugar
+    @Override
+    public String toString() {
+        return "Filme{" +
+                "nome='" + nome + '\'' +
+                ", dataDeLancamento=" + dataDeLancamento +
+                ", descricao='" + descricao + '\'' +
+                ", diretor=" + diretor +
+                ", ator=" + ator +
+                '}';
     }
 }
