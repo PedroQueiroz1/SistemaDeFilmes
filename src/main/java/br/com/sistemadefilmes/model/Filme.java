@@ -4,14 +4,14 @@ import java.util.List;
 
 public class Filme {
     private String nome;
-    private LocalDate dataDeLancamento;
+    private LocalDate dataLancamento;
     private String descricao;
     private Diretor diretor;
     private List<Ator> atores;
 
-    public Filme(String nome, LocalDate dataDeLancamento, String descricao, Diretor diretor, List<Ator> atores) {
+    public Filme(String nome, LocalDate dataLancamento, String descricao, Diretor diretor, List<Ator> atores) {
         this.nome = nome;
-        this.dataDeLancamento = dataDeLancamento;
+        this.dataLancamento = dataLancamento;
         this.descricao = descricao;
         this.diretor = diretor;
         this.atores = atores;
@@ -25,12 +25,12 @@ public class Filme {
         this.nome = nome;
     }
 
-    public LocalDate getDataDeLancamento() {
-        return dataDeLancamento;
+    public LocalDate getDataLancamento() {
+        return dataLancamento;
     }
 
-    public void setDataDeLancamento(LocalDate dataDeLancamento) {
-        this.dataDeLancamento = dataDeLancamento;
+    public void setDataLancamento(LocalDate dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     public String getDescricao() {
@@ -63,7 +63,7 @@ public class Filme {
     public String toString() {
         return "Filme{" +
                 "nome='" + nome + '\'' +
-                ", dataDeLancamento=" + dataDeLancamento +
+                ", dataLancamento=" + dataLancamento +
                 ", descricao='" + descricao + '\'' +
                 ", diretor=" + diretor +
                 ", atores=" + atores +
