@@ -1,12 +1,8 @@
 package br.com.sistemadefilmes.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
-// TODO implementar atributos
-/*
- LEMBRANDO QUE A CLASSE DIRETOR JÁ TEM "primeiroNome" e "segundoNome",
- porque está puxando da classe abstrata: 'Pessoa'.
- */
 public class Diretor extends Pessoa {
     private String departamento;
     private String projetosGerenciados;
@@ -40,9 +36,11 @@ public class Diretor extends Pessoa {
                 '}';
     }
 
+    private List<Filme> filmesDirigidos;
+
     @Override
     public void apresentar() {
-        System.out.println("Sou o diretor: " + getPrimeiroNome() + " " + getSegundoNome());
+        System.out.println("Sou o diretor " + getPrimeiroNome() + " " + getSegundoNome());
     }
 
 }

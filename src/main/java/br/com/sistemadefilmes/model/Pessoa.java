@@ -6,6 +6,7 @@ public abstract class Pessoa {
     private String segundoNome;
     private String email;
     private String telefone;
+    private Integer idade;
 
     public String getPrimeiroNome() {
         return primeiroNome;
@@ -38,7 +39,13 @@ public abstract class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    public Integer getIdade() {
+        return idade;
+    }
 
-    // TODO criar outro metodo que faça mais sentido para ter polimorfismo no trabalho.
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
+
     public abstract void apresentar();
 }
