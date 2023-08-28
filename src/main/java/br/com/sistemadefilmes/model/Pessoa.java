@@ -39,7 +39,6 @@ public abstract class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
     public Integer getIdade() {
         return idade;
     }
@@ -48,6 +47,5 @@ public abstract class Pessoa {
         this.idade = idade;
     }
 
-    // TODO criar outro metodo que faça mais sentido para ter polimorfismo no trabalho.
     public abstract void apresentar();
 }
