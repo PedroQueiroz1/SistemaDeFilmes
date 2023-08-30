@@ -6,7 +6,8 @@ import java.util.List;
 public interface Diretor extends Pessoa {
     private List<Filme> filmesDirigidos;
 
-    void buscarDiretorPorNome(getPrimeiroNome(), getSegundoNome());
+
+        void buscarDiretorPorNome(String nome);
     @Override
     public void apresentar() {
         System.out.println("Sou o diretor " + getPrimeiroNome() + " " + getSegundoNome());
